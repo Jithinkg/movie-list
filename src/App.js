@@ -1,23 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-
+import {Header} from './components/Header'
+import {Nav} from "./components/Nav"
+import {Results} from "./components/Results"
+const api1 = require('../src/utils/apilist/CONTENTLISTINGPAGE-PAGE1.json')
 function App() {
-  return (
+  return (  
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <Nav/>
+      <Results results={api1.page.contentitems.content}/>
     </div>
   );
 }
