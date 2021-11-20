@@ -1,6 +1,6 @@
 import react from 'react';
 
-import {Thumbnail} from './Thumbnail';
+import Thumbnail from './Thumbnail';
 import React from 'react'
 
 export const Results = ({results}) => {

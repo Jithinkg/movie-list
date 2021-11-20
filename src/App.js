@@ -3,15 +3,23 @@ import './App.css';
 import {Header} from './components/Header'
 import {Nav} from "./components/Nav"
 import {Results} from "./components/Results"
+import {connect} from 'react-redux'
 const api1 = require('../src/utils/apilist/CONTENTLISTINGPAGE-PAGE1.json')
-function App() {
+function App({movieList}) {
+  console.log('movieList', movieList)
   return (  
     <div className="App">
       <Header/>
       <Nav/>
-      <Results results={api1.page.contentitems.content}/>
+      <Results results={movieList}/>
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = state => {
+    return{
+    movieList: state.movie.content,
+  }
+}
+
+export default connect(mapStateToProps)(App);
