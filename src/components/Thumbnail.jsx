@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import LazyLoad from 'react-lazyload'
 
 const Thumbnail = ({image_name,search}) => {
     const loc = image_name.posterimage
@@ -10,7 +11,9 @@ const Thumbnail = ({image_name,search}) => {
             {image_name.name.includes(search) && 
 
                 (<div>
+                    <LazyLoad once>
                     <img src={loc} alt='missing img'/>
+                    </LazyLoad>
             <div className='p-2'>
                 <h2 className='mt-1 text-2xl text-white transition-all
                 duration-100 ease-in-out group-hover:font-bold'>{image_name.name}</h2>
