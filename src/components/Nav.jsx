@@ -1,4 +1,3 @@
-import requests from '../utils/request'
 import React from 'react'
 
 export const Nav = ({genre}) => {
