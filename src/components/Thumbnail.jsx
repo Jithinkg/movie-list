@@ -1,20 +1,17 @@
 import React from 'react'
-import {connect} from 'react-redux'
 import LazyLoad from 'react-lazyload'
 
-const Thumbnail = ({image_name,search}) => {
+const Thumbnail = ({image_name}) => {
     let loc = image_name.posterimage 
     if(image_name.posterimage === 'posterthatismissing.jpg' )
     {
         loc='placeholder_for_missing_posters.png'
     }
-    console.log('search',search)
     return (
         <div className='p-2 group cursor-pointer 
         transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50'>
-            {image_name.name.toLowerCase().includes(search.toLowerCase()) && 
 
-                (<div>
+                <div>
                     <LazyLoad once>
                     <img src={loc} alt='missing img'/>
                     </LazyLoad>
@@ -24,20 +21,13 @@ const Thumbnail = ({image_name,search}) => {
 
             </div>
                 </div>
-                )
-            
-            }
             
         </div>
 
     )
 }
 
-const mapStateToProps = state => {
-    return{
-    search: state.search
-  }
-}
 
-export default connect(mapStateToProps)(Thumbnail);
+
+export default Thumbnail;
 
