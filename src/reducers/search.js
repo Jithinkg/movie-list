@@ -1,8 +1,8 @@
-const search = (state='Family', action) =>
+const search = (state='', action) =>
 {
     switch (action.type)
     {
-        case 'SEACRH':
+        case 'SEARCH':
             return action.data;
         default:
             return state;

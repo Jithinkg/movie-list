@@ -1,33 +1,24 @@
 import {
-    HomeIcon,
-    BadgeCheckIcon,
-    CollectionIcon,
-    LightningBoltIcon,
     SearchIcon,
-    UserIcon
 } from '@heroicons/react/outline';
 import React from 'react'
 import {HeaderItem} from './HeaderItem'
+import {connect} from 'react-redux'
 
-export const Header = () => {
+const Header = ({ dispatch }) => {
+    const handleSearch = e => {
+        const value = e.target.value.trim()
+        dispatch({type:"SEARCH",data:value})
+    }
     return (
         <header className='flex flex-col sm:flex-row m-5 justify-between items-center h-auto '>
             <div className='flex flex-grow justify-evenly max-w-2xl '>
-            <HeaderItem title='HOME' Icon={HomeIcon}/>
-            <HeaderItem title='VERIFIED' Icon={BadgeCheckIcon}/>
-            <HeaderItem title='COLLECTIONS' Icon={CollectionIcon}/>
-            <HeaderItem title='TRENDING' Icon={LightningBoltIcon}/>
             <HeaderItem title='SEARCH' Icon={SearchIcon}/>
-            <HeaderItem title='ACCOUNT' Icon={UserIcon}/>
             </div>
-            <img 
-            src="https://links.papareact.com/ua6" 
-            width={200}
-             height={100}
-
-            
-            />
+            <input onChange={handleSearch}></input>
             
         </header>
     )
 }
+
+export default connect()(Header);

@@ -7,9 +7,9 @@ const Thumbnail = ({image_name,search}) => {
     return (
         <div className='p-2 group cursor-pointer 
         transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50'>
-            {image_name.name.includes(search) ? 
+            {image_name.name.includes(search) && 
 
-                <div>
+                (<div>
                     <img src={loc} alt='missing img'/>
             <div className='p-2'>
                 <h2 className='mt-1 text-2xl text-white transition-all
@@ -17,10 +17,7 @@ const Thumbnail = ({image_name,search}) => {
 
             </div>
                 </div>
-
-                : 
-
-                null
+                )
             
             }
             

@@ -1,16 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
-import {Header} from './components/Header'
+import Header from './components/Header'
 import {Nav} from "./components/Nav"
 import {Results} from "./components/Results"
 import {connect} from 'react-redux'
 const api1 = require('../src/utils/apilist/CONTENTLISTINGPAGE-PAGE1.json')
-function App({movieList}) {
+function App({movieList, genre}) {
   console.log('movieList', movieList)
   return (  
     <div className="App">
+      <div className='flex flex-row'>
+      <Nav genre={genre}/>
       <Header/>
-      <Nav/>
+      </div>
+      
       <Results results={movieList}/>
     </div>
   );
@@ -18,7 +21,8 @@ function App({movieList}) {
 
 const mapStateToProps = state => {
     return{
-    movieList: state.movie.content,
+    movieList: state.movie.contentitems.content,
+    genre: state.movie.title
   }
 }
 
