@@ -3,7 +3,11 @@ import {connect} from 'react-redux'
 import LazyLoad from 'react-lazyload'
 
 const Thumbnail = ({image_name,search}) => {
-    const loc = image_name.posterimage
+    let loc = image_name.posterimage 
+    if(image_name.posterimage === 'posterthatismissing.jpg' )
+    {
+        loc='placeholder_for_missing_posters.png'
+    }
     console.log('search',search)
     return (
         <div className='p-2 group cursor-pointer 

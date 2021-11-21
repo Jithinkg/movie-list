@@ -5,7 +5,7 @@ import React from 'react'
 
 export const Results = ({results}) => {
     return (
-        <div className='px-5 my-10 sm:grid grid-cols-3'>
+        <div className='px-5 my-10 grid grid-cols-3'>
             {results.map(result=>(
                 <div>
                     <Thumbnail image_name={result}/>
