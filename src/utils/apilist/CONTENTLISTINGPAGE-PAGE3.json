@@ -5,7 +5,7 @@
     "page-num-requested" : "3",
     "page-size-requested" : "20",
     "page-size-returned" : "14",
-    "content-items": {
+    "contentitems": {
       "content": [
         {
           "name": "Family Pot",

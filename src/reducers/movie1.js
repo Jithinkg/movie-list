@@ -1,6 +1,6 @@
 const api1 = require('../utils/apilist/CONTENTLISTINGPAGE-PAGE1.json')
 
-const movie = (state=api1.page, action) => 
+const movie1 = (state=api1.page, action) => 
 {
     switch (action.type)
     {
@@ -10,4 +10,4 @@ const movie = (state=api1.page, action) =>
   
 }
 
-export default movie;
+export default movie1;

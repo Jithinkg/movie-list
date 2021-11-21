@@ -8,7 +8,7 @@ const Thumbnail = ({image_name,search}) => {
     return (
         <div className='p-2 group cursor-pointer 
         transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50'>
-            {image_name.name.includes(search) && 
+            {image_name.name.toLowerCase().includes(search.toLowerCase()) && 
 
                 (<div>
                     <LazyLoad once>
