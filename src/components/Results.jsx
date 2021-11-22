@@ -6,6 +6,8 @@ import React from 'react'
 const Results = ({results,search}) => {
     return (
         <div className='px-5 my-10 grid grid-cols-3'>
+
+            {/* passing only those movie namesto thumbnail component which matches with user input */}
             {results.map(result=>(
             result.name.toLowerCase().includes(search.toLowerCase()) &&
             (
@@ -27,6 +29,6 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(Results);
+export default connect(mapStateToProps)(Results); 
 
 

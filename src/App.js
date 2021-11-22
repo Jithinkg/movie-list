@@ -13,8 +13,8 @@ function App({movieList1,movieList2,movieList3, genre}) {
   return (  
     <div className="App">
       <div className='flex flex-row'>
-      <Nav genre={genre}/>
-      <Header/>
+      {/* <Nav genre={genre}/> */}
+      <Header genre={genre}/>
       </div>
       
       <Results results={movieList1}/>

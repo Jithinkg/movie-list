@@ -4,8 +4,8 @@ export const Nav = ({genre}) => {
     console.log('genre', genre)
     return (
         <nav>
-            <div className='flex px-10 sm:px-20 text-2xl whitespace-nowrap
-            space-x-10 sm:space-x-20 overflow-x-scroll
+            <div className='flex px-7 sm:px-15 text-2xl whitespace-nowrap
+            space-x-10 sm:space-x-20 
             scrollbar-hide'>
                 <h2
                  className='last:pr-24 cursor-pointer 
