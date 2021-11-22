@@ -1,10 +1,9 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
 import Header from './components/Header'
-import {Nav} from "./components/Nav"
 import Results from "./components/Results"
 import {connect} from 'react-redux'
-const api1 = require('../src/utils/apilist/CONTENTLISTINGPAGE-PAGE1.json')
+// const api1 = require('../src/utils/apilist/CONTENTLISTINGPAGE-PAGE1.json')
 function App({movieList1,movieList2,movieList3, genre}) {
   console.log('movieList1', movieList1)
   console.log('movieList2', movieList2)
@@ -12,9 +11,10 @@ function App({movieList1,movieList2,movieList3, genre}) {
 
   return (  
     <div className="App">
-      <div className='flex flex-row'>
+      <div className='w-full'>
       {/* <Nav genre={genre}/> */}
       <Header genre={genre}/>
+
       </div>
       
       <Results results={movieList1}/>
