@@ -1,4 +1,4 @@
-import { connect } from "react-redux";
+import { connect } from "react-redux";   //import connect for connecting redux store with components
 import Thumbnail from "./Thumbnail";
 import React from "react";
 

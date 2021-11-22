@@ -7,6 +7,8 @@ const Header = ({ dispatch, genre }) => {
     const value = e.target.value.trim();
     dispatch({ type: "SEARCH", data: value });
   };
+
+  //displaying Genre and implementing search option for movies
   return (
     <header className="flex items-center justify-between m-5 h-auto w-11/12 px-4">
       <div
@@ -23,7 +25,7 @@ const Header = ({ dispatch, genre }) => {
                  active:text-red-500
                 "
         >
-          {genre}
+          {genre} 
         </h2>
       </div>
 
@@ -44,4 +46,4 @@ const Header = ({ dispatch, genre }) => {
   );
 };
 
-export default connect()(Header);
+export default connect()(Header);  //connecting Header component with redux store

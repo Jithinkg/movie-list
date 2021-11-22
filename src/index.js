@@ -4,10 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Provider} from 'react-redux';
-import {createStore} from 'redux'
-import movieApp from './reducers/index'
+import {createStore} from 'redux'  //importing createstore to create a redux store
+import movieApp from './reducers/index'  //importing the combined reducer 'movieApp' to create store.
 
-let store = createStore(movieApp)
+let store = createStore(movieApp)  //Created redux store using createStore
 
 
 ReactDOM.render(

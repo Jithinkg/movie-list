@@ -1,11 +1,14 @@
 import React from "react";
-import LazyLoad from "react-lazyload";
+import LazyLoad from "react-lazyload"; // library used for lazyloading
 
 const Thumbnail = ({ image_name }) => {
+  //edge condition for missing image
   let loc = image_name.posterimage;
   if (image_name.posterimage === "posterthatismissing.jpg") {
     loc = "placeholder_for_missing_posters.png";
   }
+
+  //displaying movie thumbnails and movie name
   return (
     <div
       className="p-2 h-full flex items-start justify-center cursor-pointer 
